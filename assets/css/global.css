@@ -1,0 +1,336 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8ffef;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Table Header (Green) */
+table th {
+  background-color: #00cc3d; /* Green */
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Table Body Cells */
+table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Alternating Row Colors */
+table tr:nth-child(even) {
+  background-color: #f3fdf6; /* Light green tint */
+}
+
+/* Hover Effect */
+table tr:hover {
+  background-color: #e0f8e9; /* Slightly stronger green tint */
+}
+
+/* Last Row Border Removal */
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  table {
+    font-size: 14px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+  }
+}
+
+
+/* Form container */
+form {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fieldset box */
+fieldset {
+  border: 2px solid #00cc3d;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+/* Title of each section */
+legend {
+  font-weight: bold;
+  padding: 6px 12px;
+  background: #00cc3d;
+  color: white;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+/* Generic input, select, textarea styling */
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="time"],
+input[list],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+
+/* Focus effect */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #00cc3d;
+  box-shadow: 0 0 6px rgba(46, 204, 113, 0.4);
+  outline: none;
+}
+
+/* Textarea styling */
+textarea {
+  resize: vertical;
+}
+
+/* File inputs */
+input[type="file"] {
+  padding: 6px;
+  background: #f8fff9;
+  border: 2px dashed #00cc3d;
+  cursor: pointer;
+}
+
+/* Range slider */
+input[type="range"] {
+  width: 100%;
+}
+
+/* Select multiple */
+select[multiple] {
+  height: auto;
+  padding: 10px;
+}
+
+/* Checkbox and radio */
+input[type="checkbox"],
+input[type="radio"] {
+  transform: scale(1.2);
+  margin-right: 6px;
+  accent-color: #00cc3d; /* makes checkbox and radio green */
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="image"] {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  background: #00cc3d;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+/* Hover effect */
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  background: #27ae60;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Image button fix */
+input[type="image"] {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+/* Overall spacing */
+input,
+select,
+textarea {
+  margin-bottom: 12px;
+}
+
+/* Mobile-friendly */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+  }
+  fieldset {
+    padding: 15px;
+  }
+}
+
+
+
+/* Base style for all pins */
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 13px;
+    padding: 4px 10px;
+    margin: 12px;
+    border-radius: 14px;
+    font-weight: 500;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.25s ease;
+}
+
+/* Individual Colors Like the Picture */
+
+/* Orange - Pending */
+.pending {
+    background: rgba(255, 165, 0, 0.15);
+    color: #ffb44c;
+    border-color: rgba(255,165,0,0.3);
+}
+
+/* Blue - In Progress */
+.progress {
+    background: rgba(0, 132, 255, 0.18);
+    color: #49a9ff;
+    border-color: rgba(0,132,255,0.3);
+}
+
+/* Purple - Submitted */
+.submitted {
+    background: rgba(150, 100, 255, 0.18);
+    color: #b78aff;
+    border-color: rgba(150,100,255,0.3);
+}
+
+/* Yellow - In Review */
+.review {
+    background: rgba(255, 220, 0, 0.15);
+    color: #ffe760;
+    border-color: rgba(255,220,0,0.3);
+}
+
+/* Green - Success */
+.success {
+    background: rgba(0, 180, 60, 0.18);
+    color: rgba(0,180,60,0.3);
+    border-color: rgba(0,180,60,0.3);
+}
+
+/* Red - Failed */
+.failed {
+    background: rgba(255, 60, 60, 0.18);
+    color: #ff8080;
+    border-color: rgba(255,60,60,0.3);
+}
+
+/* Grey - Expired */
+.expired {
+    background: rgba(200,200,200,0.12);
+    color: #bbbbbb;
+    border-color: rgba(200,200,200,0.25);
+}
+
+/* Grey - Expired */
+.black {
+    background: rgb(43, 43, 43);
+    color: #d6d6d6;
+    border-color: rgba(200,200,200,0.25);
+}
+
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+
+.nav {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    overflow-y: auto;
+}
+
+.nav-right {
+    flex: 5;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 40px;
+    box-shadow: #d9e2cd 0px 0px 100px 0px;
+}
