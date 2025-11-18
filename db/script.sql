@@ -1,3 +1,7 @@
+CREATE DATABASE sys_inf;
+
+\c sys_inf;
+
 -- genre
 CREATE TABLE IF NOT EXISTS genre(
   id SERIAL PRIMARY KEY,
